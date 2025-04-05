@@ -32,3 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
 function updateOrderButton(button, quantity) {
     button.textContent = `Order (${quantity})`;
 }
+function showCategory(categoryId) {
+    const categories = document.querySelectorAll('.menu-category');
+    categories.forEach(cat => cat.classList.add('hidden'));
+
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    document.getElementById(categoryId).classList.remove('hidden');
+    event.target.classList.add('active');
+}

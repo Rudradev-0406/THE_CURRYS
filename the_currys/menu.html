@@ -9,212 +9,272 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to The Currys</h1>
+        <h1>𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 𝙏𝙝𝙚 𝘾𝙪𝙧𝙧𝙮'𝙨</h1>
     
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <button id="openAbout" class="glow-btn about-btn">About Us</button>
             </ul>
         </nav>
     </header>
+
+    <!-- About Us Popup -->
+    <div class="about-popup" id="aboutPopup">
+        <div class="about-content">
+          <span id="closeAbout" class="close-btn">&times;</span>
+          <h2 class="glow-text">About Us</h2>
+          <p>
+            We are a team of passionate developers building immersive web experiences with style and flair.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum officia dicta minus quos eveniet magnam ipsa debitis laborum, praesentium atque, consectetur nesciunt hic tenetur magni similique, soluta ipsam illum adipisci.
+            Mollitia nesciunt voluptatibus recusandae, accusantium aliquam autem eos rem harum unde eaque odit provident similique, consectetur id sapiente iste aspernatur voluptates voluptas libero cumque? Qui ipsam maiores consectetur perferendis corporis?
+            Delectus accusantium impedit nisi exercitationem numquam architecto quibusdam debitis, quam ea, minima expedita quidem atque eligendi voluptates! Veritatis aliquam placeat perferendis sequi porro nam id amet cupiditate quas, praesentium vero.
+            Veniam minima quia itaque dolore, possimus voluptate ab corporis praesentium quibusdam earum odio accusamus ea? Cum, corporis aliquam esse eos eius harum ab tempora ullam, in asperiores saepe nobis modi?
+            Illum doloremque placeat voluptates, tempora provident explicabo deserunt, voluptas et consequatur quis fuga pariatur cum, sunt dolorem. Ullam expedita quidem velit rem modi dolorem recusandae. Possimus omnis recusandae vel tempora.
+            Tempore corrupti, rem nisi minima, fugiat veniam eaque, facere vel explicabo deleniti expedita. Autem nisi ratione iste ipsum, soluta earum fugiat harum a molestias nobis atque, iure, libero rerum nihil!
+            Nulla odit, reiciendis ut aut dolor architecto vel reprehenderit deleniti impedit libero eveniet incidunt dolorem deserunt nostrum sapiente vero in iusto iste eaque dolores beatae itaque. Veritatis dolore excepturi sed.
+            Debitis sit laboriosam, optio asperiores et ex cupiditate eligendi ea? Id consequatur aliquam ratione nam ipsum illo officia ipsa, repellendus quam? Iure cumque excepturi ducimus illo provident non enim sed!
+            Ullam debitis harum tenetur nemo cupiditate earum atque enim nulla vitae, excepturi possimus facilis nam saepe, corporis accusamus? Quos, consectetur aliquam nam voluptatum dolore corrupti non in consequuntur quis voluptates?
+          </p>
+          <button class="glow-btn">Let’s Talk</button>
+        </div>
+      </div>
+      
+      <!-- Scripts -->
+      <script src="about_us.js"></script>
+      <link rel="stylesheet" href="about_us.css">
     
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <h3>SOUP</h3>
+    <!-- Contact Us Button -->
+    <button id="openContact" onclick="openContactPopup()">Contact Us</button>
+    
+    <!-- Contact Us Popup HTML -->
+    <!-- You can either include contact_us.html directly or embed it here -->
+    <div class="contact-popup" id="contactPopup">
+      <div class="about-content">
+        <span class="close-btn" onclick="closeContactPopup()">&times;</span>
+        <h2 class="glow-text">Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us!</p>
+        <div class="hover-card">
+          <p>Email: example@example.com</p>
+          <p>Phone: +1 (234) 567-8901</p>
+        </div>
+      </div>
+    </div>
+    <!-- JS file -->
+    <script src="contact_us.js"></script>
+    <link rel="stylesheet" href="contact_us.css">
+
+
+
+
+    <div class="category-tabs">
+        <button class="tab-btn active" onclick="showCategory('soups')">Soups</button>
+        <button class="tab-btn" onclick="showCategory('chinese veg Starters')">Chinese veg Starters</button>
+        <button class="tab-btn" onclick="showCategory('Maggi')">Maggi</button>
+        <button class="tab-btn" onclick="showCategory('veg Fried rice')">Veg Freid Rice</button>
+        <button class="tab-btn" onclick="showCategory('Continental Veg Starters')">Continental Veg Starters</button>
+        <button class="tab-btn" onclick="showCategory('Veg Bourger')">veg Bourger</button>
+        <button class="tab-btn" onclick="showCategory('Pasta')">Pasta</button>
+        <button class="tab-btn" onclick="showCategory('Sandwiches')">Sandwiches</button>
+        <button class="tab-btn" onclick="showCategory('Pizza')">Pizza</button>
+        <button class="tab-btn" onclick="showCategory('Mocktails and Beverages')">Mocktails and Beverages</button>        
+      </div>
+      
+<!-- ************************************************************************************************************************************************************************************************************************** -->
+
+      <div id="soups" class="menu-category">
+        <li class="menu-item">
+            <img src="images/vegetable-hot-and-sour-soup.jpg" alt="Vegetable Hot and Sour Soup" class="menu-image">
+            <div class="menu-details">
+                <h1>Vegetable Hot and Sour Soup</h1>
+                <p>Price: $5.99</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        <li class="menu-item">
+            <img src="images/vegetable-clear-soup.jpg" alt="Vegetable Clear Soup" class="menu-image">
+            <div class="menu-details">
+                <h1>Vegetable Clear Soup</h1>
+                <p>Price: $4.99</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        <li class="menu-item">
+            <img src="images/manchow-soup-veg-6.jpg" alt="vegitable manchow soup" class="menu-image">
+            <div class="menu-details">
+                <h1>Vegetable manchow Soup</h1>
+                <p>Price: $4.99</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+
+        <li class="menu-item">
+            <img src="images/Sweet-Corn-Soup-23.jpg" alt="Sweet-Corn-Soup" class="menu-image">
+            <div class="menu-details">
+                <h1>Sweet Sweet Corn Soup</h1>
+                <p>Price: $4.99</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+      </div>
+
+
+<!-- ************************************************************************************************************************************************************************************************************************** -->
+
+
+      <div id="chinese veg Starters" class="menu-category hidden">
+        <li class="menu-item">
+            <img src="images/Honey-Chilli-potato-.jpg" alt="Honey Potato" class="menu-image">
+            <div class="menu-details">
+                <h1>Honey Potato</h1>
+                <p>Price: ₹160</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        
+        <li class="menu-item">
+            <img src="images/veg-manchurian.jpg" alt="Veg Manchurian" class="menu-image">
+            <div class="menu-details">
+                <h1>Veg Manchurian</h1>
+                <p>Price: ₹160</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        
+        <li class="menu-item">
+            <img src="images/paneer65.jpg" alt="Paneer 65" class="menu-image">
+            <div class="menu-details">
+                <h1>Paneer 65</h1>
+                <p>Price: ₹160</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        
+        <li class="menu-item">
+            <img src="images/crishpyk-corn.jpg" alt="Crispy Corn" class="menu-image">
+            <div class="menu-details">
+                <h1>Crispy Corn</h1>
+                <p>Price: ₹170</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        
+        <li class="menu-item">
+            <img src="images/chilli-paneer.jpg" alt="Chilly Paneer" class="menu-image">
+            <div class="menu-details">
+                <h1>Chilly Paneer</h1>
+                <p>Price: ₹170</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        
+        <li class="menu-item">
+            <img src="images/mashroom-chilly.jpg" alt="Mushroom Chilli" class="menu-image">
+            <div class="menu-details">
+                <h1>Mushroom Chilli</h1>
+                <p>Price: ₹180</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        
+        <li class="menu-item">
+            <img src="images/chili-baby-corn.jpg" alt="Baby Corn Chilli" class="menu-image">
+            <div class="menu-details">
+                <h1>Baby Corn Chilli</h1>
+                <p>Price: ₹180</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        
+        <li class="menu-item">
+            <img src="images/crispy-paneer.jpg" alt="Crispy Paneer" class="menu-image">
+            <div class="menu-details">
+                <h1>Crispy Paneer</h1>
+                <p>Price: ₹190</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+        
+        <li class="menu-item">
+            <img src="images/kung-pao-paneer.jpg" alt="Kung Pao Paneer" class="menu-image">
+            <div class="menu-details">
+                <h1>Kung Pao Paneer</h1>
+                <p>Price: ₹190</p>
+                <div class="quantity-controls">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="order-button">Order</button>
+            </div>
+        </li>
+      </div>
+<!-- ************************************************************************************************************************************************************************************************************************** -->
+
+
+       <div id="Maggi" class="menu-category hidden">
         <ul>
-            <li class="menu-item">
-                <img src="images/vegetable-hot-and-sour-soup.jpg" alt="Vegetable Hot and Sour Soup" class="menu-image">
-                <div class="menu-details">
-                    <h1>Vegetable Hot and Sour Soup</h1>
-                    <p>Price: $5.99</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            <li class="menu-item">
-                <img src="images/vegetable-clear-soup.jpg" alt="Vegetable Clear Soup" class="menu-image">
-                <div class="menu-details">
-                    <h1>Vegetable Clear Soup</h1>
-                    <p>Price: $4.99</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            <li class="menu-item">
-                <img src="images/manchow-soup-veg-6.jpg" alt="vegitable manchow soup" class="menu-image">
-                <div class="menu-details">
-                    <h1>Vegetable manchow Soup</h1>
-                    <p>Price: $4.99</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            <li class="menu-item">
-                <img src="images/vegetable-clear-soup.jpg" alt="Vegetable Clear Soup" class="menu-image">
-                <div class="menu-details">
-                    <h1>Vegetable Clear Soup</h1>
-                    <p>Price: $4.99</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            <li class="menu-item">
-                <img src="images/Sweet-Corn-Soup-23.jpg" alt="Sweet-Corn-Soup" class="menu-image">
-                <div class="menu-details">
-                    <h1>Sweet Sweet Corn Soup</h1>
-                    <p>Price: $4.99</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            <li class="menu-item">
-                <img src="images/Honey-Chilli-potato-.jpg" alt="Honey Potato" class="menu-image">
-                <div class="menu-details">
-                    <h1>Honey Potato</h1>
-                    <p>Price: ₹160</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/veg-manchurian.jpg" alt="Veg Manchurian" class="menu-image">
-                <div class="menu-details">
-                    <h1>Veg Manchurian</h1>
-                    <p>Price: ₹160</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/paneer65.jpg" alt="Paneer 65" class="menu-image">
-                <div class="menu-details">
-                    <h1>Paneer 65</h1>
-                    <p>Price: ₹160</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/crishpyk-corn.jpg" alt="Crispy Corn" class="menu-image">
-                <div class="menu-details">
-                    <h1>Crispy Corn</h1>
-                    <p>Price: ₹170</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/chilli-paneer.jpg" alt="Chilly Paneer" class="menu-image">
-                <div class="menu-details">
-                    <h1>Chilly Paneer</h1>
-                    <p>Price: ₹170</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/mashroom-chilly.jpg" alt="Mushroom Chilli" class="menu-image">
-                <div class="menu-details">
-                    <h1>Mushroom Chilli</h1>
-                    <p>Price: ₹180</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/chili-baby-corn.jpg" alt="Baby Corn Chilli" class="menu-image">
-                <div class="menu-details">
-                    <h1>Baby Corn Chilli</h1>
-                    <p>Price: ₹180</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/crispy-paneer.jpg" alt="Crispy Paneer" class="menu-image">
-                <div class="menu-details">
-                    <h1>Crispy Paneer</h1>
-                    <p>Price: ₹190</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/kung-pao-paneer.jpg" alt="Kung Pao Paneer" class="menu-image">
-                <div class="menu-details">
-                    <h1>Kung Pao Paneer</h1>
-                    <p>Price: ₹190</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
             <li class="menu-item">
                 <img src="images/plain-maggi.jpg" alt="Plain Maggi" class="menu-image">
                 <div class="menu-details">
@@ -256,7 +316,60 @@
                     <button class="order-button">Order</button>
                 </div>
             </li>
-            
+      </div>
+    
+<!-- ************************************************************************************************************************************************************************************************************************** -->
+      <div id="Continental Veg Starters" class="menu-category hidden">
+
+    <!-- Continental Veg Starters -->
+    <li class="menu-item">
+        <img src="images/french-fries.jpg" alt="French Fries" class="menu-image">
+        <div class="menu-details">
+            <h1>French Fries</h1>
+            <p>Price: ₹130</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <span class="quantity">1</span>
+                <button class="increase">+</button>
+            </div>
+            <button class="order-button">Order</button>
+        </div>
+    </li>
+    
+    <li class="menu-item">
+        <img src="images/peri-peri-fries.jpg" alt="Peri Peri Fries" class="menu-image">
+        <div class="menu-details">
+            <h1>Peri Peri Fries</h1>
+            <p>Price: ₹150</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <span class="quantity">1</span>
+                <button class="increase">+</button>
+            </div>
+            <button class="order-button">Order</button>
+        </div>
+    </li>
+    
+    <li class="menu-item">
+        <img src="images/tacos.jpg" alt="Tacos" class="menu-image">
+        <div class="menu-details">
+            <h1>Tacos (6 pcs)</h1>
+            <p>Price: ₹190</p>
+            <div class="quantity-controls">
+                <button class="decrease">-</button>
+                <span class="quantity">1</span>
+                <button class="increase">+</button>
+            </div>
+            <button class="order-button">Order</button>
+        </div>
+    </li>
+</div>
+
+<!-- ************************************************************************************************************************************************************************************************************************** -->
+
+
+<div id="veg Fried rice" class="menu-category hidden">
+
             <!-- Veg Fried Rice -->
             <li class="menu-item">
                 <img src="images/veg-fried-rice.jpg" alt="Veg Fried Rice" class="menu-image">
@@ -326,8 +439,12 @@
                     </div>
                     <button class="order-button">Order</button>
                 </div>
-            </li>
-            
+            </li> 
+</div>
+
+<!-- ************************************************************************************************************************************************************************************************************************** -->            
+
+        <div id="Veg Bourger" class="menu-category hidden">
             <!-- Veg Burgers -->
             <li class="menu-item">
                 <img src="images/aloo-tokki-burger.jpg" alt="Aloo Tikki Burger" class="menu-image">
@@ -370,49 +487,12 @@
                     <button class="order-button">Order</button>
                 </div>
             </li>
-            <!-- Continental Veg Starters -->
-            <li class="menu-item">
-                <img src="images/french-fries.jpg" alt="French Fries" class="menu-image">
-                <div class="menu-details">
-                    <h1>French Fries</h1>
-                    <p>Price: ₹130</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/peri-peri-fries.jpg" alt="Peri Peri Fries" class="menu-image">
-                <div class="menu-details">
-                    <h1>Peri Peri Fries</h1>
-                    <p>Price: ₹150</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/tacos.jpg" alt="Tacos" class="menu-image">
-                <div class="menu-details">
-                    <h1>Tacos (6 pcs)</h1>
-                    <p>Price: ₹190</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
+        </div>
+
+
+<!-- ************************************************************************************************************************************************************************************************************************** -->            
+
+        <div id="Mocktails and Beverages" class="menu-category hidden">
             <!-- Mocktails & Beverages -->
             <li class="menu-item">
                 <img src="images/lemon-soda.jpg" alt="Lemon Soda" class="menu-image">
@@ -483,6 +563,11 @@
                     <button class="order-button">Order</button>
                 </div>
             </li>
+        </div>    
+
+<!-- ************************************************************************************************************************************************************************************************************************** -->            
+
+        <div id="Pasta" class="menu-category hidden">
             <!-- Pasta -->
             <li class="menu-item">
                 <img src="images/White-Sauce-Paste.jpg" alt="White Sauce Pasta" class="menu-image">
@@ -525,7 +610,12 @@
                     <button class="order-button">Order</button>
                 </div>
             </li>
-            
+        </div>
+
+
+<!-- ************************************************************************************************************************************************************************************************************************** -->            
+
+        <div id="Sandwiches" class="menu-category hidden">     
             <!-- Sandwiches -->
             <li class="menu-item">
                 <img src="images/chese-corn-sandwhich.jpg" alt="Cheese Corn Sandwich" class="menu-image">
@@ -568,7 +658,12 @@
                     <button class="order-button">Order</button>
                 </div>
             </li>
-            
+        </div>
+
+
+<!-- ************************************************************************************************************************************************************************************************************************** -->            
+
+        <div id="Pizza" class="menu-category hidden">    
             <!-- Pizza -->
             <li class="menu-item">
                 <img src="images/margherita-pizza.jpg" alt="Margherita Pizza" class="menu-image">
@@ -597,66 +692,7 @@
                     <button class="order-button">Order</button>
                 </div>
             </li>
-            
-            <li class="menu-item">
-                <img src="images/paneer-tikka-pizza.jpg" alt="Paneer Tikka Pizza" class="menu-image">
-                <div class="menu-details">
-                    <h1>Paneer Tikka Pizza</h1>
-                    <p>Price: ₹250</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <!-- Desserts -->
-            <li class="menu-item">
-                <img src="images/chocolate-brownie.jpg" alt="Chocolate Brownie" class="menu-image">
-                <div class="menu-details">
-                    <h1>Chocolate Brownie</h1>
-                    <p>Price: ₹120</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/choco-lava-cake.jpg" alt="Choco Lava Cake" class="menu-image">
-                <div class="menu-details">
-                    <h1>Choco Lava Cake</h1>
-                    <p>Price: ₹140</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-            <li class="menu-item">
-                <img src="images/ice-cream.jpg" alt="Ice Cream" class="menu-image">
-                <div class="menu-details">
-                    <h1>Ice Cream (Vanilla/Chocolate/Strawberry)</h1>
-                    <p>Price: ₹100</p>
-                    <div class="quantity-controls">
-                        <button class="decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase">+</button>
-                    </div>
-                    <button class="order-button">Order</button>
-                </div>
-            </li>
-            
-
-
+        </div>
         </ul>
     </section>
     

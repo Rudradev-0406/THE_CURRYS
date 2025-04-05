@@ -3,16 +3,21 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: rgb(216, 96, 212);
+    background-image: url('images/menu_background.jpg');
+    background-size:30cap;
+    background-position: center;
 }
 
 header {
-    background: linear-gradient(90deg, #ff6600, #ff3300);
-    color: white;
+    background-color: #ffe100;
+    color: rgb(0, 0, 0);
     padding: 3px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family:'Times New Roman', Times, serif;
 }
 
 nav ul {
@@ -20,7 +25,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 10px 10;
 }
 
 nav ul li {
@@ -28,23 +33,101 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: yellow;
+    color: rgb(255, 0, 0);
 }
+/* ************************************************************************BODY************************************************************************ */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    margin: 150px;
+}
+
+.logo-text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 1000px;
+    height: 450px;
+
+}
+.logo-text:hover {
+    transform: scale(1.1);
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+
+.logo-text .title {
+    color: #e63946;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.logo-text p {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    line-height: 1.5;
+}
+
+.logo_image img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0);
+}
+.logo_image img:hover {
+    transform: scale(1.1);
+    background-color: black;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
 
 
 footer {
-    background: #222;
-    color: white;
+    background-color: #ffe100;
+    color: black;
     text-align: center;
     padding: 15px 0;
-    margin-top: 30px;
-    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.about-btn {
+    position: fixed;
+    bottom: 20px;  /* Distance from the bottom */
+    right: 20px;  /* Distance from the right */
+    
+    border: 2px solid #39ff14;
+    color: #868686;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px #39ff14;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+    box-shadow: 0 0 16px #39ff14, 0 0 32px #39ff14;
+  }
